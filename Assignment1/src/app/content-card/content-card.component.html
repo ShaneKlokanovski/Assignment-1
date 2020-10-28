@@ -1,1 +1,12 @@
-<p>content-card works!</p>
+<div class="title">
+  {{game.title}}
+</div>
+<div class="author">
+  {{game.author}}
+</div>
+<div class="body">
+  {{game.body}}
+</div>
+<div class="type" *ngIf="game.type">
+  {{game.type}}
+</div>

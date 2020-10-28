@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Assignment1';
 }
+
+export interface Content{
+  readonly id: number;
+  author: string;
+  imgUrl?: string;
+  type?: string;
+  title: string;
+  body: string;
+  tags?: string;
+}

@@ -1,1 +1,13 @@
-<app-content-card *ngFor="let  of contentArray"></app-content-card>
+<div>
+<input #searchTitle placeholder="Please enter a title">
+<button (click)="searchForTitle(searchTitle.value)">Search</button>
+</div>
+<div>
+    {{searchResult}}
+</div>
+
+<app-content-card *ngFor="let g of (games | gameTypeFilter: 'FPS'); last as isLast" [game]="g" [class.is-last]="isLast" class="fps {{ searchGameTitle === g.title ? 'FoundGame' : ''}}" ></app-content-card>
+
+
+<app-content-card *ngFor="let g of (games | gameTypeFilter: 'RPG'); last as isLast" [game]="g" [class.is-last]="isLast" [class.FoundGame]="searchGameTitle === g.title" class="rpg"></app-content-card>
+
