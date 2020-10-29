@@ -1,4 +1,4 @@
-<div class="title">
+<div appHoverStyle class="title" >
   {{game.title}}
 </div>
 <div class="author">
@@ -7,6 +7,15 @@
 <div class="body">
   {{game.body}}
 </div>
-<div class="type" *ngIf="game.type">
+<div  class="type" *ngIf="game.type">
   {{game.type}}
+</div>
+<div class="imgUrl" *ngIf="game.imgUrl; else defaultPic">
+  <img src="{{game.imgUrl}}" width="350" height="350">
+</div>
+<ng-template #defaultPic>
+  <img src='https://stylebyemilyhenderson.com/wp-content/themes/sage-master/dist/images/no_image_available.png' width="350" height="350">
+</ng-template>
+<div class="tags">
+  {{game.tags}}
 </div>
