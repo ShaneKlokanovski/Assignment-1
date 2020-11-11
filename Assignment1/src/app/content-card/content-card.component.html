@@ -1,4 +1,4 @@
-<div appHoverStyle class="title" >
+<div appHoverStyle changeTextStyle="textDecoration" class="title" >
   {{game.title}}
 </div>
 <div class="author">
@@ -16,6 +16,9 @@
 <ng-template #defaultPic>
   <img src='https://stylebyemilyhenderson.com/wp-content/themes/sage-master/dist/images/no_image_available.png' width="350" height="350">
 </ng-template>
-<div class="tags">
-  {{game.tags}}
+<div class="tags" *ngIf="game.tags">
+  <div appHoverStyle changeTextStyle="fontWeight" *ngFor="let tag of game.tags">
+    {{tag}}
+  </div>
 </div>
+
