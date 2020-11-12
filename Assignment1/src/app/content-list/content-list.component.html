@@ -1,3 +1,4 @@
+<app-create-content (addNewGame)="addGameToList($event)"></app-create-content>
 <div>
 <input #searchTitle placeholder="Please enter a title">
 <button (click)="searchForTitle(searchTitle.value)">Search</button>
@@ -10,4 +11,5 @@
 
 
 <app-content-card *ngFor="let g of (games | gameTypeFilter: 'RPG'); last as isLast" [game]="g" [class.is-last]="isLast" [class.FoundGame]="searchGameTitle === g.title" class="rpg"></app-content-card>
+
 

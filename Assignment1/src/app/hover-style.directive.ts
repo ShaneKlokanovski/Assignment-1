@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 
 @Directive({
   selector: '[appHoverStyle]'
@@ -7,7 +7,7 @@ export class HoverStyleDirective {
 
   @Input() changeTextStyle: string;
 
-  constructor(private elm: ElementRef, private rend: Renderer2) {
+  constructor(private elm: ElementRef) {
   }
 
   @HostListener('mouseenter') onMouseEnter(): void{

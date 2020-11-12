@@ -66,4 +66,8 @@ searchGameTitle?: string;
     this.searchResult = 'The game that you have searched for has not been located';
     return;
   }
+
+  // tslint:disable-next-line:typedef
+  addGameToList($event: any) {
+  }
 }
